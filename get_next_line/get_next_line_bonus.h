@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlefevre <hlefevre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/19 17:14:54 by hlefevre          #+#    #+#             */
-/*   Updated: 2021/11/30 14:36:37 by hlefevre         ###   ########.fr       */
+/*   Created: 2021/12/01 17:00:18 by hlefevre          #+#    #+#             */
+/*   Updated: 2021/12/01 17:09:28 by hlefevre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
 # include <stdio.h>
 # include <sys/types.h>
@@ -20,6 +20,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# include <limits.h>
 
 char	*get_next_line(int fd);
 char	*gnl_newfile(int fd, char *save);

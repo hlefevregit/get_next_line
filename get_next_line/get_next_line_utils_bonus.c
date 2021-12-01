@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlefevre <hlefevre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/19 14:50:40 by hlefevre          #+#    #+#             */
-/*   Updated: 2021/11/30 14:27:21 by hlefevre         ###   ########.fr       */
+/*   Created: 2021/12/01 17:01:03 by hlefevre          #+#    #+#             */
+/*   Updated: 2021/12/01 17:09:31 by hlefevre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 size_t	ft_strlen(const char *str)
 {

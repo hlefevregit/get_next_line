@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlefevre <hlefevre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/18 15:04:07 by hlefevre          #+#    #+#             */
-/*   Updated: 2021/12/01 17:03:38 by hlefevre         ###   ########.fr       */
+/*   Created: 2021/12/01 17:00:49 by hlefevre          #+#    #+#             */
+/*   Updated: 2021/12/01 17:09:17 by hlefevre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*get_backup(char *str)
 {
@@ -93,15 +93,15 @@ char	*gnl_newfile(int fd, char *save)
 
 char	*get_next_line(int fd)
 {
-	static char	*save;
+	static char	*save[OPEN_MAX];
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
-	save = gnl_newfile(fd, save);
-	if (!save)
+	save[fd] = gnl_newfile(fd, save[fd]);
+	if (!save[fd])
 		return (NULL);
-	line = gnl_getline(save);
-	save = get_backup(save);
+	line = gnl_getline(save[fd]);
+	save[fd] = get_backup(save[fd]);
 	return (line);
 }
